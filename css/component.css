@@ -1,0 +1,143 @@
+
+.grid-box div {
+	position: relative;
+  max-width: 325px;
+  border-radius: 5px;
+  margin: 0  auto 0 auto;
+	overflow: hidden;
+	width: 100%;
+	background: #5A6071;
+	text-align: center;
+}
+
+.grid-box div figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.display-edit {
+  display: inline-block;
+}
+
+.grid-box div figcaption::before,
+.grid-box div figcaption::after {
+	pointer-events: none;
+}
+
+.grid-box div figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grid-box div p {
+	margin: 0;
+}
+
+
+    /***** Milo *****/
+    /*---------------*/
+    div.effect-milo img {
+    	max-width: 330px;
+    	width: 100%;
+    	opacity: 1;
+    	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    	transition: opacity 0.35s, transform 0.35s;
+    	-webkit-backface-visibility: hidden;
+    	backface-visibility: hidden;
+    }
+
+    @media (max-width: 500px) {
+      .col-6 {
+        width: 100%;
+      }
+    }
+
+    div.effect-milo:hover img {
+    	opacity: 0.2;
+    	-webkit-transform: translate3d(0,0,0) scale(1);
+    }
+
+    div.effect-milo p {
+    	padding: 0 15px 0 0;
+    	width: 60%;
+    	border-right: 1px solid #fff;
+      font-size: 1.35rem;
+      font-family: 'Futura-book', sans-serif;
+    	text-align: right;
+    	opacity: 0;
+    	-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+    	transition: opacity 0.45s, transform 0.65s;
+    	-webkit-transform: translate3d(-40px,0,0);
+    	transform: translate3d(-40px,0,0);
+    }
+
+      @media (min-width: 30em) and (max-width: 52em) {
+        div.effect-milo p {
+          font-size: 18px;
+        }
+      }
+
+    div.effect-milo:hover p {
+    	opacity: 1;
+    	-webkit-transform: translate3d(0,0,0);
+    	transform: translate3d(0,0,0);
+    }
+
+
+
+
+
+
+.grid {
+	max-width: 69em;
+	list-style: none;
+	margin: 30px auto;
+	padding: 0;
+}
+
+.grid li {
+	display: block;
+	float: left;
+	padding: 7px;
+	width: 33%;
+	opacity: 0;
+}
+
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+	opacity: 1;
+}
+
+.grid li a,
+.grid li img {
+	outline: none;
+	border: none;
+	display: block;
+	max-width: 100%;
+}
+
+/* Effect 2: Move Up */
+.grid.effect-2 li.animate {
+	-webkit-transform: translateY(200px);
+	transform: translateY(200px);
+	-webkit-animation: moveUp 0.65s ease forwards;
+	animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+	0% { }
+	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
